@@ -8,15 +8,15 @@ def get_page(url):
         if url == "http://xkcd.com/353":
             return """Depending on the purpose of your site, choose a name that can be easily recognized and reflects the site’s theme.
 
-Try not to have a domain name that sounds or spell out like your competitor. You do not want visitors to accidentally visit other than your site.
+                      Try not to have a domain name that sounds or spell out like your competitor. You do not want visitors to accidentally visit other than your site.
 
-Vanity url is a trend now. For more options on vanity url, get yours from “iwantmyname” service provider.Use keywords related words in the domain name that describe your site (if it makes sense). The domain name should suggest the nature of your product or service. A good domain name describes exactly what the site is about. It is important for a visitor to get an idea of what the website is about just by looking at the domain name. For example, our site service is to make awareness to success in blogging so I take it "besuccessblogger".
+                      Vanity url is a trend now. For more options on vanity url, get yours from “iwantmyname” service provider.Use keywords related words in the domain name that describe your site (if it makes sense). The domain name should suggest the nature of your product or service. A good domain name describes exactly what the site is about. It is important for a visitor to get an idea of what the website is about just by looking at the domain name. For example, our site service is to make awareness to success in blogging so I take it "besuccessblogger".
 
-Easy to Remeber
+                      Easy to Remeber
 
-Your domain name should be easy to remember because your visitors will want to type in the domain name in the web browser for revisits and if they can’t remember the domain name then you loose a huge amount potential traffic. It is also easier to spread the word of mouth when the domain name is easy to remember.
+                      Your domain name should be easy to remember because your visitors will want to type in the domain name in the web browser for revisits and if they can’t remember the domain name then you loose a huge amount potential traffic. It is also easier to spread the word of mouth when the domain name is easy to remember.
 
-Keep your domain name short"""
+                      Keep your domain name short"""
     except:
         return ""
     return ""
