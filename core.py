@@ -64,15 +64,31 @@ def lookup(index, keyword):
     return []
 
 
-def add_to_index(index, keyword, url):
-    """add a [keyword, [url..]] to an index"""
+def record_user_click(index,keyword,url):
+    """modifies the entry in the index for
+    the input word by increasing the count associated
+    with the url by 1."""
     for entry in index:
         if entry[0] == keyword:
-            links = lookup(index, keyword)  # avoid duplicated
-            if url not in links:
-                entry[1].append(url)
-                return
-    index.append([keyword, [url]])
+            for link in entry[1]:
+                if link[0] == url:
+                    link[1] += 1
+                    return
+
+
+def add_to_index(index, keyword, url):
+    """store keyword, url , count
+    >>data structure
+    >>[[keyword, [[url, count], [url, cont],..]],[keyword...[]]]"""
+    for entry in index:
+        if entry[0] == keyword:
+            for link in entry[1]:
+                if link[0] == url:
+                    return
+            entry[1].append([url, 0])
+            return
+    # not found, add new keyword to index
+    index.append([keyword, [[url, 0]]])
 
 
 def add_page_to_index(index, url, content):
@@ -105,6 +121,8 @@ def crawl_web(seed):
 
 seed = "http://xkcd.com/353"
 index = crawl_web(seed)
+print lookup(index, "name")
+record_user_click(index, "name", "http://xkcd.com/353")
 print lookup(index, "name")
 
 
